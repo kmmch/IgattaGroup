@@ -52,10 +52,33 @@ p, h1, h2, h3, h4, h5, h6, a, span {
 // ヘッダー
 // --------------------------------------------
 .header {
+    height: $heightHeaderSp;
+    @include pc {
+        height: $heightHeaderPc;
+    }
+
     &__container {
         padding: 12px 18px;
     }
+    &--sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        opacity: 1;
+        visibility: visible;
+        animation: slideDown 0.3s ease-in-out;
+    }
 }
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
 // ハンバーガーボタン
 #hamburgerBtn{
 	position:fixed;

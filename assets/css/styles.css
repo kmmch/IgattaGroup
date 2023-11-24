@@ -44,10 +44,35 @@ p, h1, h2, h3, h4, h5, h6, a, span {
   font-size: 0.625rem;
 }
 
+.header {
+  height: 60px;
+}
+@media screen and (min-width: 1024px) {
+  .header {
+    height: 100px;
+  }
+}
 .header__container {
   padding: 12px 18px;
 }
+.header--sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  visibility: visible;
+  animation: slideDown 0.3s ease-in-out;
+}
 
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
 #hamburgerBtn {
   position: fixed;
   z-index: 9999;
