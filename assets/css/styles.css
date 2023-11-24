@@ -1,14 +1,14 @@
 #test {
-  color: red;
+  color: #333;
 }
 @media screen and (min-width: 768px) {
   #test {
-    color: blue;
+    color: #fff;
   }
 }
 @media screen and (min-width: 1024px) {
   #test {
-    color: green;
+    color: #ff8a00;
   }
 }
 
@@ -16,4 +16,94 @@
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
+}
+
+#hamburgerBtn {
+  position: fixed;
+  z-index: 9999;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+}
+#hamburgerBtn span {
+  display: inline-block;
+  transition: all 0.4s;
+  position: absolute;
+  left: 14px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #666;
+  width: 45%;
+}
+#hamburgerBtn span:nth-of-type(1) {
+  top: 15px;
+}
+#hamburgerBtn span:nth-of-type(2) {
+  top: 23px;
+}
+#hamburgerBtn span:nth-of-type(3) {
+  top: 31px;
+}
+#hamburgerBtn.active span:nth-of-type(1) {
+  top: 18px;
+  left: 18px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 30%;
+}
+#hamburgerBtn.active span:nth-of-type(2) {
+  opacity: 0;
+}
+#hamburgerBtn.active span:nth-of-type(3) {
+  top: 30px;
+  left: 18px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 30%;
+}
+
+#hamburgerMenu {
+  position: fixed;
+  z-index: -1;
+  opacity: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  transition: all 0.3s;
+}
+#hamburgerMenu.panelactive {
+  opacity: 1;
+  z-index: 999;
+}
+#hamburgerMenu.panelactive #hamburgerMenuList {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+#hamburgerMenu.panelactive ul {
+  display: block;
+}
+#hamburgerMenu ul {
+  display: none;
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#hamburgerMenu li {
+  list-style: none;
+  text-align: center;
+}
+#hamburgerMenu li a {
+  color: #333;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: bold;
 }/*# sourceMappingURL=styles.css.map */

@@ -21,3 +21,112 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+
+// --------------------------------------------
+// ヘッダー
+// --------------------------------------------
+// ハンバーガーボタン
+#hamburgerBtn{
+	position:fixed;
+    z-index: 9999;
+	top:10px;
+	right: 10px;
+	cursor: pointer;
+    width: 50px;
+    height:50px;
+
+    & span {
+        display: inline-block;
+        transition: all .4s;
+        position: absolute;
+        left: 14px;
+        height: 3px;
+        border-radius: 2px;
+        background-color: #666;
+        width: 45%;   
+        
+        &:nth-of-type(1) {
+            top:15px;	
+        }
+        &:nth-of-type(2) {
+            top:23px;
+        }
+        &:nth-of-type(3) {
+            top:31px;
+        }
+    }
+
+    &.active {
+        & span {
+            &:nth-of-type(1) {
+                top: 18px;
+                left: 18px;
+                transform: translateY(6px) rotate(-45deg);
+                width: 30%;
+            }
+            &:nth-of-type(2) {
+                opacity: 0;
+            }
+            &:nth-of-type(3){
+                top: 30px;
+                left: 18px;
+                transform: translateY(-6px) rotate(45deg);
+                width: 30%;
+            }
+        }
+    }
+}
+
+// ハンバーガーメニュー
+#hamburgerMenu {
+    position:fixed;
+	z-index: -1;
+	opacity: 0;
+    top:0;
+	width:100%;
+    height: 100vh;
+    transition: all 0.3s;
+
+    &.panelactive{
+        opacity: 1;
+        z-index:999;
+
+        & #hamburgerMenuList {
+            position: fixed;
+            z-index: 999;
+            width: 100%;
+            height: 100vh;
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        & ul {
+            display: block;
+        }
+    }
+
+    & ul {
+        display: none;
+        position: absolute;
+        z-index: 999;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+
+    & li {
+        list-style: none;
+        text-align: center; 
+
+        & a {
+            color: #333;
+	        text-decoration: none;
+	        padding:10px;
+	        display: block;
+	        text-transform: uppercase;
+	        letter-spacing: 0.1em;
+	        font-weight: bold;
+        }
+    }
+}
