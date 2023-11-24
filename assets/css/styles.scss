@@ -1,0 +1,23 @@
+@use "modules/variables" as *;
+@use "modules/mixin" as *;
+
+#test {
+    color: $colorMain;
+
+    @include tab {
+        color: $colorSub;
+    }
+
+    @include pc {
+        color: $colorThird;
+    }
+}
+
+// --------------------------------------------
+// 共通
+// --------------------------------------------
+.container {
+    max-width: $maxWidthContainer;
+    margin-left: auto;
+    margin-right: auto;
+}
