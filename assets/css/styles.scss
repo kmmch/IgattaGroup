@@ -1,5 +1,6 @@
 @use "modules/variables" as *;
 @use "modules/mixin" as *;
+@use "modules/keyframes" as *;
 
 #test {
     color: $colorMain;
@@ -52,6 +53,7 @@ p, h1, h2, h3, h4, h5, h6, a, span {
 // ヘッダー
 // --------------------------------------------
 .header {
+    background-color: $bgColorThird;
     height: $heightHeaderSp;
     @include pc {
         height: $heightHeaderPc;
@@ -68,14 +70,6 @@ p, h1, h2, h3, h4, h5, h6, a, span {
         opacity: 1;
         visibility: visible;
         animation: slideDown 0.3s ease-in-out;
-    }
-}
-@keyframes slideDown {
-    0% {
-        transform: translateY(-100%);
-    }
-    100% {
-        transform: translateY(0%);
     }
 }
 
