@@ -132,9 +132,11 @@ p, h1, h2, h3, h4, h5, h6, a, span {
 	z-index: -1;
 	opacity: 0;
     top:0;
+    right: 0;
 	width:100%;
     height: 100vh;
     transition: all 0.3s;
+    background-color: $bgColorThird;
 
     &.panelactive{
         opacity: 1;
@@ -161,20 +163,42 @@ p, h1, h2, h3, h4, h5, h6, a, span {
         top:50%;
         left:50%;
         transform: translate(-50%,-50%);
+        width: 100%;
     }
 
     & li {
         list-style: none;
         text-align: center; 
+        margin-bottom: 30px;
+        &:nth-child(4) {
+            margin-bottom: 10px;
+        }
 
-        & a {
+        & a:not(.btn) {
             color: $colorMain;
 	        text-decoration: none;
-	        padding:10px;
 	        display: block;
 	        text-transform: uppercase;
 	        letter-spacing: 0.1em;
-	        font-weight: bold;
         }
+    }
+}
+
+// ボタン共通
+.btn {
+    text-align: center;
+    border-radius: 30px;
+    color: $colorSub;
+    font-size: 13px;
+    display: inline-block;
+
+    &__primary {
+        background-color: $bgColorMain;
+        padding: 16px 32px 15px 31px;
+    }
+
+    &__secondary {
+        background-color: $bgColorSub;
+        padding: 16px 36px 15px 39px;
     }
 }

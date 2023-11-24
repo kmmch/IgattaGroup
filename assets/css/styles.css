@@ -123,9 +123,11 @@ p, h1, h2, h3, h4, h5, h6, a, span {
   z-index: -1;
   opacity: 0;
   top: 0;
+  right: 0;
   width: 100%;
   height: 100vh;
   transition: all 0.3s;
+  background-color: #fff;
 }
 #hamburgerMenu.panelactive {
   opacity: 1;
@@ -149,17 +151,36 @@ p, h1, h2, h3, h4, h5, h6, a, span {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 100%;
 }
 #hamburgerMenu li {
   list-style: none;
   text-align: center;
+  margin-bottom: 30px;
 }
-#hamburgerMenu li a {
+#hamburgerMenu li:nth-child(4) {
+  margin-bottom: 10px;
+}
+#hamburgerMenu li a:not(.btn) {
   color: #333;
   text-decoration: none;
-  padding: 10px;
   display: block;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  font-weight: bold;
+}
+
+.btn {
+  text-align: center;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 13px;
+  display: inline-block;
+}
+.btn__primary {
+  background-color: #ff8a00;
+  padding: 16px 32px 15px 31px;
+}
+.btn__secondary {
+  background-color: #ffb800;
+  padding: 16px 36px 15px 39px;
 }/*# sourceMappingURL=styles.css.map */
