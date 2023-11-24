@@ -53,7 +53,7 @@ p, h1, h2, h3, h4, h5, h6, a, span {
 // ヘッダー
 // --------------------------------------------
 .header {
-    background-color: $bgColorThird;
+    // background-color: $bgColorThird;
     height: $heightHeaderSp;
     @include pc {
         height: $heightHeaderPc;
@@ -61,7 +61,25 @@ p, h1, h2, h3, h4, h5, h6, a, span {
 
     &__container {
         padding: 12px 18px;
+        @include pc {
+            display: flex;
+            align-content: center;
+            justify-content: space-between;
+            height: 100%;
+        }
     }
+
+    &__ttl {
+        @include pc {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__nav {
+        width: 80%;
+    }
+
     &--sticky {
         position: fixed;
         top: 0;
@@ -70,6 +88,27 @@ p, h1, h2, h3, h4, h5, h6, a, span {
         opacity: 1;
         visibility: visible;
         animation: slideDown 0.3s ease-in-out;
+        background-color: $bgColorThird;
+    }
+}
+
+// グローバルメニュー
+.globalMenu {
+    display: none;
+    @include pc {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 100%;
+    }
+
+    &List {
+        display: flex;
+        align-items: center;
+
+        &__item {
+            margin-left: 30px;
+        }
     }
 }
 
@@ -82,6 +121,9 @@ p, h1, h2, h3, h4, h5, h6, a, span {
 	cursor: pointer;
     width: 50px;
     height:50px;
+    @include pc {
+        display: none;
+    }
 
     & span {
         display: inline-block;
@@ -137,6 +179,9 @@ p, h1, h2, h3, h4, h5, h6, a, span {
     height: 100vh;
     transition: all 0.3s;
     background-color: $bgColorThird;
+    @include pc {
+        display: none;
+    }
 
     &.panelactive{
         opacity: 1;
