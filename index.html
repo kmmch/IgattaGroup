@@ -34,60 +34,62 @@
                     </div>
                 </a>
             </div>
-            <div class="header__nav">
-                <nav class="globalMenu">
-                    <ul class="globalMenuList">
-                        <li class="globalMenuList__item">
-                            <a class="hamburgerLink" href="#">Mission&Vision</a>
-                        </li>
-                        <li class="globalMenuList__item">
-                            <a class="hamburgerLink" href="#">Message</a>
-                        </li>
-                        <li class="globalMenuList__item">
-                            <a class="hamburgerLink" href="#">Job List</a>
-                        </li>
-                        <li class="globalMenuList__item">
+            <button id="hamburgerBtn" class="hamburger" aria-label="メニューを開く" aria-controls="gnav" aria-expanded="false">
+                <span class="hamburger__line" aria-hidden="true"></span>
+            </button>
+            <nav id="hamburgerMenu">
+                <div id="hamburgerMenuList">
+                    <ul>
+                        <li><a class="hamburgerLink" href="#">Mission&Vision</a></li>  
+                        <li><a class="hamburgerLink" href="#">Message</a></li>  
+                        <li><a class="hamburgerLink" href="#">Job List</a></li>  
+                        <li>
                             <a href="#" class="btn btn__secondary">MY PAGEはこちら</a>
-                        </li>
-                        <li class="globalMenuList__item">
+                        </li>  
+                        <li>
                             <a href="#" class="btn btn__primary">エントリーはこちら</a>
-                        </li>
+                        </li>  
                     </ul>
-                </nav>
-                <div id="hamburgerBtn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
                 </div>
-                <nav id="hamburgerMenu">
-                    <div id="hamburgerMenuList">
-                        <ul>
-                            <li><a class="hamburgerLink" href="#">Mission&Vision</a></li>  
-                            <li><a class="hamburgerLink" href="#">Message</a></li>  
-                            <li><a class="hamburgerLink" href="#">Job List</a></li>  
-                            <li>
-                                <a href="#" class="btn btn__secondary">MY PAGEはこちら</a>
-                            </li>  
-                            <li>
-                                <a href="#" class="btn btn__primary">エントリーはこちら</a>
-                            </li>  
-                        </ul>
-                    </div>
-                </nav>
-            </div>
+            </nav>
+            <nav class="globalMenu">
+                <ul class="globalMenuList">
+                    <li class="globalMenuList__item">
+                        <a class="hamburgerLink" href="#">Mission&Vision</a>
+                    </li>
+                    <li class="globalMenuList__item">
+                        <a class="hamburgerLink" href="#">Message</a>
+                    </li>
+                    <li class="globalMenuList__item">
+                        <a class="hamburgerLink" href="#">Job List</a>
+                    </li>
+                    <li class="globalMenuList__item">
+                        <a href="#" class="btn btn__secondary">MY PAGEはこちら</a>
+                    </li>
+                    <li class="globalMenuList__item">
+                        <a href="#" class="btn btn__primary">エントリーはこちら</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </header>
-    <a href="#" class="btn btn__secondary">MY PAGEはこちら</a>
-    <br>
-    <a href="#" class="btn btn__primary">エントリーはこちら</a>
 
-    <div style="height:100vh;background-color: aliceblue;">aaa</div>
-    <div style="height:100vh;background-color:aquamarine;">bbb</div>
-    <div style="height:100vh;background-color:bisque;">ccc</div>
-    <div style="height:100vh;background-color:aquamarine;">bbb</div>
-    <div style="height:100vh;background-color:bisque;">ccc</div>
+
+
+    <main class="main">
+        <div class="container">
+            <div style="height:100vh;background-color: aliceblue;">aaa</div>
+            <div style="height:100vh;background-color:aquamarine;">bbb</div>
+            <div style="height:100vh;background-color:bisque;">ccc</div>
+            <div style="height:100vh;background-color:aquamarine;">bbb</div>
+            <div style="height:100vh;background-color:bisque;">ccc</div>        
+        </div>
+    </main>
+
+    <footer class="footer"></footer>
 
     <!-- scripts -->
+    <script src="./assets/js/vendor/jquery-3.7.1.min.js"></script>
     <script src="./assets/js/main.js"></script>
 </body>
 </html>

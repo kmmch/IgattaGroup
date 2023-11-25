@@ -7,6 +7,14 @@
     transform: translateY(0%);
   }
 }
+@keyframes slideUp {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
 #test {
   color: #333;
 }
@@ -53,7 +61,12 @@ p, h1, h2, h3, h4, h5, h6, a, span {
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
   height: 60px;
+  background: #fff;
 }
 @media screen and (min-width: 1024px) {
   .header {
@@ -61,102 +74,66 @@ p, h1, h2, h3, h4, h5, h6, a, span {
   }
 }
 .header__container {
-  padding: 12px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px 0 18px;
 }
 @media screen and (min-width: 1024px) {
   .header__container {
-    display: flex;
-    align-content: center;
-    justify-content: space-between;
     height: 100%;
   }
 }
-@media screen and (min-width: 1024px) {
-  .header__ttl {
-    display: flex;
-    align-items: center;
-  }
-}
-.header__nav {
-  width: 80%;
-}
-.header--sticky {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  opacity: 1;
-  visibility: visible;
-  animation: slideDown 0.3s ease-in-out;
-  background-color: #fff;
+.header__container.container {
+  max-width: 1440px;
 }
 
-.globalMenu {
-  display: none;
-}
-@media screen and (min-width: 1024px) {
-  .globalMenu {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    height: 100%;
-  }
-}
-.globalMenuList {
+.hamburger {
   display: flex;
+  justify-content: center;
   align-items: center;
-}
-.globalMenuList__item {
-  margin-left: 30px;
-}
-
-#hamburgerBtn {
-  position: fixed;
-  z-index: 9999;
-  top: 9px;
-  right: 9px;
+  width: 20px;
+  height: 60px;
+  border: 0;
   cursor: pointer;
-  width: 50px;
-  height: 50px;
+  z-index: 9999;
 }
 @media screen and (min-width: 1024px) {
-  #hamburgerBtn {
+  .hamburger {
     display: none;
   }
 }
-#hamburgerBtn span {
-  display: inline-block;
-  transition: all 0.4s;
-  position: absolute;
-  left: 14px;
+.hamburger__line {
+  position: relative;
+  width: 20px;
   height: 1px;
-  border-radius: 2px;
+  background-color: #333;
+}
+.hamburger__line::before, .hamburger__line::after {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 1px;
   background-color: #333;
   width: 20px;
+  transition: transform 0.3s;
 }
-#hamburgerBtn span:nth-of-type(1) {
-  top: 15px;
+.hamburger__line::before {
+  top: -8px;
 }
-#hamburgerBtn span:nth-of-type(2) {
-  top: 21px;
+.hamburger__line::after {
+  bottom: -8px;
 }
-#hamburgerBtn span:nth-of-type(3) {
-  top: 27px;
+.hamburger.active .hamburger__line {
+  background: transparent;
 }
-#hamburgerBtn.active span:nth-of-type(1) {
-  top: 18px;
-  left: 18px;
-  transform: translateY(6px) rotate(-45deg);
-  width: 30%;
+.hamburger.active .hamburger__line::before {
+  top: 0;
+  transform: rotate(45deg);
 }
-#hamburgerBtn.active span:nth-of-type(2) {
-  opacity: 0;
-}
-#hamburgerBtn.active span:nth-of-type(3) {
-  top: 30px;
-  left: 18px;
-  transform: translateY(-6px) rotate(45deg);
-  width: 30%;
+.hamburger.active .hamburger__line::after {
+  bottom: 0;
+  transform: rotate(-45deg);
 }
 
 #hamburgerMenu {
@@ -202,10 +179,10 @@ p, h1, h2, h3, h4, h5, h6, a, span {
 #hamburgerMenu li {
   list-style: none;
   text-align: center;
-  margin-bottom: 30px;
+  margin: 30px 0;
 }
-#hamburgerMenu li:nth-child(4) {
-  margin-bottom: 10px;
+#hamburgerMenu li:nth-child(4), #hamburgerMenu li:nth-child(5) {
+  margin: 10px 0;
 }
 #hamburgerMenu li a:not(.btn) {
   color: #333;
@@ -213,6 +190,32 @@ p, h1, h2, h3, h4, h5, h6, a, span {
   display: block;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+}
+
+.noScroll {
+  overflow: hidden;
+}
+
+.globalMenu {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .globalMenu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+  }
+}
+.globalMenuList {
+  display: flex;
+  align-items: center;
+}
+.globalMenuList__item:nth-child(2), .globalMenuList__item:nth-child(3), .globalMenuList__item:nth-child(4) {
+  margin-left: 29px;
+}
+.globalMenuList__item:nth-child(5) {
+  margin-left: 12px;
 }
 
 .btn {
@@ -229,4 +232,13 @@ p, h1, h2, h3, h4, h5, h6, a, span {
 .btn__secondary {
   background-color: #ffb800;
   padding: 16px 36px 15px 39px;
+}
+
+main .container {
+  padding: 60px 0 30px;
+}
+@media screen and (min-width: 1024px) {
+  main .container {
+    padding: 100px 0 30px;
+  }
 }/*# sourceMappingURL=styles.css.map */

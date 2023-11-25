@@ -1,25 +1,4 @@
-var hamburgerBtn = document.getElementById('hamburgerBtn');
-var hamburgerMenu = document.getElementById('hamburgerMenu');
-var hamburgerLinkArr = document.querySelectorAll('.hamburgerLink');
-
-
-const clickHamburgerBtn = () => {
-    hamburgerBtn.classList.toggle('active');
-    hamburgerMenu.classList.toggle('panelactive');
-}
-hamburgerBtn.addEventListener('click', clickHamburgerBtn);
-
-
-const clickHamburgerLink = () => {
-    hamburgerBtn.classList.remove('active');
-    hamburgerMenu.classList.remove('panelactive');
-}
-hamburgerLinkArr.forEach((link) => {
-    link.addEventListener('click', clickHamburgerLink);
-});
-
-
-
+/*
 const HEADER_CLASS_NAME = '.header'
 const HEADER_STICKY = 'header--sticky';
 const positionDisplayHeader = 300;
@@ -36,3 +15,22 @@ window.addEventListener('scroll', function() {
         document.body.style.marginTop = '0'; // コンテンツの余白をリセット
     }
 });
+*/
+
+(function($){
+
+    // ハンバーガーボタンクリック時
+    $("#hamburgerBtn").on('click',function(){
+	    $(this).toggleClass('active');
+        $("#hamburgerMenu").toggleClass('panelactive');
+        $('body').toggleClass('noScroll');
+    });
+
+    // ハンバーガーメニューのリンククリック時
+    $("#hamburgerMenu a").on('click',function(){
+        $("#hamburgerBtn").removeClass('active');
+        $("#hamburgerMenu").removeClass('panelactive');
+        $('body').removeClass('noScroll');
+    });
+
+}(jQuery));
