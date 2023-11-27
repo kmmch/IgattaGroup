@@ -34,10 +34,10 @@
                     </div>
                 </a>
             </div>
-            <button id="hamburgerBtn" class="hamburger" aria-label="メニューを開く" aria-controls="gnav" aria-expanded="false">
-                <span class="hamburger__line" aria-hidden="true"></span>
+            <button id="hamburgerBtn" class="hamburger__btn" aria-label="メニューを開く" aria-controls="gnav" aria-expanded="false">
+                <span class="hamburger__btn--line" aria-hidden="true"></span>
             </button>
-            <nav id="hamburgerMenu">
+            <nav id="hamburgerMenu" class="hamburger__menu">
                 <div id="hamburgerMenuList">
                     <ul>
                         <li><a class="hamburgerLink" href="#">Mission&Vision</a></li>  
@@ -73,7 +73,42 @@
             </nav>
         </div>
     </header>
-
+    <!---->
+    <div id="fixedHeader">
+        <div class="container header__container">
+            <div class="header__ttl">
+                <a href="#" class="sitelogo">
+                    <figure class="sitelogo__img">
+                        <img src="./assets/image/igatta-recruit-logo.svg" alt="">
+                    </figure>
+                    <div class="sitelogo__txt">
+                        <h1>Igatta Group</h1>
+                        <h2>新卒採用サイト</h2>
+                    </div>
+                </a>
+            </div>
+            <nav class="globalMenu">
+                <ul class="globalMenuList">
+                    <li class="globalMenuList__item">
+                        <a class="hamburgerLink" href="#">Mission&Vision</a>
+                    </li>
+                    <li class="globalMenuList__item">
+                        <a class="hamburgerLink" href="#">Message</a>
+                    </li>
+                    <li class="globalMenuList__item">
+                        <a class="hamburgerLink" href="#">Job List</a>
+                    </li>
+                    <li class="globalMenuList__item">
+                        <a href="#" class="btn btn__secondary">MY PAGEはこちら</a>
+                    </li>
+                    <li class="globalMenuList__item">
+                        <a href="#" class="btn btn__primary">エントリーはこちら</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!---->
 
 
     <main class="main">

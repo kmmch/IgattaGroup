@@ -2,7 +2,7 @@
 
     // ハンバーガーボタンクリック時
     $("#hamburgerBtn").on('click',() => {
-	    $(this).toggleClass('active');
+	    $("#hamburgerBtn").toggleClass('active');
         $("#hamburgerMenu").toggleClass('panelactive');
         $('body').toggleClass('noScroll');
     });
@@ -14,4 +14,15 @@
         $('body').removeClass('noScroll');
     });
 
+
+
+    // スクロールによるヘッダーの表示/非表示切り替え
+    const fh = $('#fixedHeader');
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 500) {
+            fh.addClass('is-show');
+        } else {
+            fh.removeClass('is-show');
+        }
+    });
 }(jQuery));
