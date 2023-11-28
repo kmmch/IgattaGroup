@@ -179,8 +179,7 @@ p, h1, h2, h3, h4, h5, h6, a, span {
   z-index: -1;
   opacity: 0;
   top: 0;
-  right: 0;
-  width: 100%;
+  right: -120;
   height: 100vh;
   transition: all 0.3s;
   background-color: #fff;
@@ -193,6 +192,8 @@ p, h1, h2, h3, h4, h5, h6, a, span {
 .hamburger__menu.panelactive {
   opacity: 1;
   z-index: 999;
+  right: 0;
+  width: 100%;
 }
 .hamburger__menu.panelactive #hamburgerMenuList {
   position: fixed;
@@ -367,4 +368,12 @@ p, h1, h2, h3, h4, h5, h6, a, span {
   .firstVisual__caption {
     left: 10%;
   }
+}
+
+.section__ttl--main {
+  font-weight: 700;
+  font-style: normal;
+  line-height: normal;
+  font-size: 40px; /*IE9以前に対応する*/
+  font-size: 2.5rem;
 }/*# sourceMappingURL=styles.css.map */

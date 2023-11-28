@@ -179,8 +179,8 @@ p, h1, h2, h3, h4, h5, h6, a, span {
         z-index: -1;
         opacity: 0;
         top:0;
-        right: 0;
-        width:100%;
+        // right: 0;
+        right: -120;
         height: 100vh;
         transition: all 0.3s;
         background-color: $bgColorThird;
@@ -191,6 +191,8 @@ p, h1, h2, h3, h4, h5, h6, a, span {
         &.panelactive{
             opacity: 1;
             z-index:999;
+            right: 0;
+            width:100%;
     
             & #hamburgerMenuList {
                 position: fixed;
@@ -387,6 +389,22 @@ main {
         @include pc {
             // padding: calc($heightHeaderPc + 0px ) 0 30px;
         }    
+    }
+}
+
+.section {
+    &__ttl {
+        &--main {
+            // color: #333;
+            font-weight: $fontWeightBold;
+            font-style: normal;
+            line-height: normal;
+            @include rem(40);
+        }
+
+        &--sub {
+            //
+        }
     }
 }
 
