@@ -19,25 +19,33 @@
 // --------------------------------------------
 p, h1, h2, h3, h4, h5, h6, a, span {
     font-family: Noto Sans JP;
+    color: $colorMain;
 }
 
 .container {
     max-width: $maxWidthContainer;
     margin-left: auto;
     margin-right: auto;
+    @include pc {
+        max-width: $maxWidthContainerPc;
+    }
 }
 
 .sitelogo {
     display: flex;
 
     &__txt {
-        color: $colorThird;
         font-weight: $fontWeightBold;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         line-height: normal;
         margin-left: 11px;
+
+        & h1,
+        & h2 {
+            color: $colorThird;
+        }
 
         & h1 {
             @include rem(14);
@@ -51,8 +59,15 @@ p, h1, h2, h3, h4, h5, h6, a, span {
 .is {
     &Sp {
         display: block;
-        @include pc {
+        @include tab {
             display: none;
+        }
+    }
+
+    &Tab {
+        display: none;
+        @include tab {
+            display: block;
         }
     }
 
@@ -311,7 +326,8 @@ p, h1, h2, h3, h4, h5, h6, a, span {
         margin-top: -60px;
         margin-right: 15px;
         width: 316px;
-        height: 522px;
+        // height: 522px;
+        height: 100%;
         top: calc($heightHeaderSp + 85px);
         color: #fff;
         background: linear-gradient(180deg, $bgColorMain 0%, $bgColorSub 99.98%);
@@ -384,6 +400,7 @@ p, h1, h2, h3, h4, h5, h6, a, span {
 // メインコンテンツ
 // --------------------------------------------
 main {
+    margin-top: 80px;
     & .container {
         // padding: calc($heightHeaderSp + 0px ) 0 30px;
         @include pc {
@@ -393,21 +410,73 @@ main {
 }
 
 .section {
+    padding-top: 128px;
+    @include pc {
+        padding-top: 78px 
+    }
+
     &__ttl {
         &--main {
             // color: #333;
             font-weight: $fontWeightBold;
             font-style: normal;
             line-height: normal;
-            @include rem(40);
+            text-align: center;
+            @include rem(32);
+            @include pc {
+                @include rem(40);
+            }
         }
 
         &--sub {
-            //
+            text-align: center;
+            margin-bottom: 9px;
         }
     }
 }
 
+
+// --------------------------------------------
+// Mission & Vision
+// --------------------------------------------
+#MissonAndVision {
+    background: url(/assets/image/mission-bg.png) no-repeat bottom;
+}
+.messages {
+    padding: 61px 0 262px 0;
+    @include pc{
+        padding: 132px 0 262px 0;
+    }
+}
+.message {
+    &__ttl {
+        &--main {
+            margin: 25px 0;
+            @include rem(24);
+            font-weight: $fontWeightBold;
+            line-height: 150%;
+        }
+        &--sub {
+
+        }
+    }
+
+    &__txt {
+        @include rem(16);
+        line-height: 175%;
+        @include pc {
+            line-height: 250%;
+        }
+    }
+
+    &:nth-child(2n+1) {
+        text-align: start;
+        margin-bottom: 111px;
+    }
+    &:nth-child(2n) {
+        text-align: end;
+    }
+}
 
 // --------------------------------------------
 // フッター

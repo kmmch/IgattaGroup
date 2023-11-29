@@ -31,25 +31,33 @@
 
 p, h1, h2, h3, h4, h5, h6, a, span {
   font-family: Noto Sans JP;
+  color: #333;
 }
 
 .container {
-  max-width: 1000px;
+  max-width: 90%;
   margin-left: auto;
   margin-right: auto;
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 1000px;
+  }
 }
 
 .sitelogo {
   display: flex;
 }
 .sitelogo__txt {
-  color: #ff8a00;
   font-weight: 700;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   line-height: normal;
   margin-left: 11px;
+}
+.sitelogo__txt h1, .sitelogo__txt h2 {
+  color: #ff8a00;
 }
 .sitelogo__txt h1 {
   font-size: 14px; /*IE9以前に対応する*/
@@ -63,9 +71,17 @@ p, h1, h2, h3, h4, h5, h6, a, span {
 .isSp {
   display: block;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .isSp {
     display: none;
+  }
+}
+.isTab {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .isTab {
+    display: block;
   }
 }
 .isPc {
@@ -292,7 +308,7 @@ p, h1, h2, h3, h4, h5, h6, a, span {
   margin-top: -60px;
   margin-right: 15px;
   width: 316px;
-  height: 522px;
+  height: 100%;
   top: 145px;
   color: #fff;
   background: linear-gradient(180deg, #ff8a00 0%, #ffb800 99.98%);
@@ -370,10 +386,70 @@ p, h1, h2, h3, h4, h5, h6, a, span {
   }
 }
 
+main {
+  margin-top: 80px;
+}
+.section {
+  padding-top: 128px;
+}
+@media screen and (min-width: 1024px) {
+  .section {
+    padding-top: 78px;
+  }
+}
 .section__ttl--main {
   font-weight: 700;
   font-style: normal;
   line-height: normal;
-  font-size: 40px; /*IE9以前に対応する*/
-  font-size: 2.5rem;
+  text-align: center;
+  font-size: 32px; /*IE9以前に対応する*/
+  font-size: 2rem;
+}
+@media screen and (min-width: 1024px) {
+  .section__ttl--main {
+    font-size: 40px; /*IE9以前に対応する*/
+    font-size: 2.5rem;
+  }
+}
+.section__ttl--sub {
+  text-align: center;
+  margin-bottom: 9px;
+}
+
+#MissonAndVision {
+  background: url(/assets/image/mission-bg.png) no-repeat bottom;
+}
+
+.messages {
+  padding: 61px 0 262px 0;
+}
+@media screen and (min-width: 1024px) {
+  .messages {
+    padding: 132px 0 262px 0;
+  }
+}
+
+.message__ttl--main {
+  margin: 25px 0;
+  font-size: 24px; /*IE9以前に対応する*/
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 150%;
+}
+.message__txt {
+  font-size: 16px; /*IE9以前に対応する*/
+  font-size: 1rem;
+  line-height: 175%;
+}
+@media screen and (min-width: 1024px) {
+  .message__txt {
+    line-height: 250%;
+  }
+}
+.message:nth-child(2n+1) {
+  text-align: start;
+  margin-bottom: 111px;
+}
+.message:nth-child(2n) {
+  text-align: end;
 }/*# sourceMappingURL=styles.css.map */

@@ -112,26 +112,64 @@
         <div class="firstVisual__bg">
         </div>
         <figure class="firstVisual__ph">
-            <picture>
-                <source media="(max-width: 375px)" srcset="./assets/image/firstview-img01_sp.png">
-                <source media="(min-width: 376px)" srcset="./assets/image/firstview-img01_pc.png">
-                <img src="./assets/image/firstview-img01_pc.png" alt="ファーストビュー">
-            </picture>
+                <img class="isSp" src="./assets/image/firstview-img01_sp.png" alt="ファーストビュー">
+                <img class="isTab" src="./assets/image/firstview-img01_pc.png" alt="ファーストビュー">
         </figure>
         <figure class="firstVisual__caption">
             <img class="isSp" src="./assets/image/firstview-message-sp.png" alt="最高に面白い仕事でこの世界を揺らせ。">
-            <img class="isPc" src="./assets/image/firstview-message.svg" alt="最高に面白い仕事でこの世界を揺らせ。">
+            <img class="isTab" src="./assets/image/firstview-message.svg" alt="最高に面白い仕事でこの世界を揺らせ。">
         </figure>
     </section>
 
     <main class="main">
-        <div class="container">
+            <section class="section" id="MissonAndVision">
+                <h2 class="section__ttl">
+                    <figure class="section__ttl--sub">
+                        <img src="./assets/image/Mission&Vision.png" alt="Mission&Vision">
+                    </figure>
+                    <p class="section__ttl--main">Igatta Groupの<br class="isSp">ミッション・ビジョン</p>
+                </h2>
+                <div class="section__container container">
+                    <ul class="messages">
+                        <li class="message">
+                            <div class="message__ttl">
+                                <figure class="message__ttl--sub">
+                                    <img src="./assets/image/Mission.png" alt="Mission">
+                                </figure>
+                                <h3 class="message__ttl--main">
+                                    未来のビジネスを創る、<br>
+                                    クライアントのWebパートナーとして共に成功を
+                                </h3>
+                            </div>
+                            <p class="message__txt">
+                                Igatta GroupはWebのトータルサポートを行う会社であり、クライアントの売上を伸ばすことを専門としています。<br>
+                                "Webパートナー"という表現は、Igatta Groupが単なるサービス提供者ではなく、クライアントと共に連携し、協力してビジネスを進化させていく存在であることを表しています。
+                            </p>
+                        </li>
+                        <li class="message">
+                            <div class="message__ttl">
+                                <figure class="message__ttl--sub">
+                                    <img src="./assets/image/Vision.png" alt="Vision">
+                                </figure>
+                                <h3 class="message__ttl--main">
+                                    日本の魅力をWebで輝かせる<br>
+                                    Igatta Groupが目指す社会を創る
+                                </h3>
+                            </div>
+                            <p class="message__txt">
+                                Igatta Groupが目指す社会は、優れたサービスや商品が世に出て皆の役に立つことです。<br>
+                                Webを活用することで、これらの優れたサービスや商品をより多くの人々に知ってもらい、<br>
+                                売上を伸ばし、事業を成長させることができる社会を目指します。
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
             <div style="height:100vh;background-color: aliceblue;">aaa</div>
             <div style="height:100vh;background-color:aquamarine;">bbb</div>
             <div style="height:100vh;background-color:bisque;">ccc</div>
             <div style="height:100vh;background-color:aquamarine;">bbb</div>
             <div style="height:100vh;background-color:bisque;">ccc</div>        
-        </div>
     </main>
 
     <footer class="footer"></footer>
