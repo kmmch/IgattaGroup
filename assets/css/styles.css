@@ -452,4 +452,73 @@ main {
 }
 .message:nth-child(2n) {
   text-align: end;
+}
+
+#CeoMessage {
+  padding-top: 80px;
+}
+#CeoMessage .section__container {
+  background: url(/assets/image/seo-message-sp.png) no-repeat 100% top;
+  position: relative;
+  margin-top: 61px;
+}
+@media screen and (min-width: 768px) {
+  #CeoMessage .section__container {
+    background: url(/assets/image/ceo-message.png) no-repeat 100% top;
+    background-position-x: 60%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #CeoMessage .section__container {
+    margin-top: 0;
+    height: 753px;
+    padding: 23px 0 24px 0;
+    background: url(/assets/image/ceo-message.png) no-repeat 100%;
+  }
+}
+#CeoMessage .container {
+  padding-top: 200px;
+}
+@media screen and (min-width: 1024px) {
+  #CeoMessage .container {
+    padding-top: 0;
+  }
+}
+
+.ceomessage__ttl {
+  margin-bottom: 30px;
+  font-size: 32px; /*IE9以前に対応する*/
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: normal;
+}
+.ceomessage__txt {
+  font-size: 16px; /*IE9以前に対応する*/
+  font-size: 1rem;
+  line-height: 230%;
+  max-width: 550px;
+}
+
+.ceoname__container {
+  background-color: #fff;
+  padding: 16px 26px 21px 26px;
+  position: absolute;
+  top: 50px;
+}
+@media screen and (min-width: 768px) {
+  .ceoname__container {
+    width: 298px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .ceoname__container {
+    width: 298px;
+    padding: 16px 0 21px 26px;
+    right: 0;
+    bottom: 53px;
+    top: auto;
+  }
+}
+.ceoname__txt {
+  margin-bottom: 20px;
 }/*# sourceMappingURL=styles.css.map */

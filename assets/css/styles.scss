@@ -478,6 +478,78 @@ main {
     }
 }
 
+
+// --------------------------------------------
+// 社長メッセージ
+// --------------------------------------------
+#CeoMessage {
+    padding-top: 80px;
+    & .section__container {
+        background: url(/assets/image/seo-message-sp.png) no-repeat 100% top;
+        position: relative;
+        margin-top: 61px;
+
+        @include tab {
+            background: url(/assets/image/ceo-message.png) no-repeat 100% top;
+            // background-position: 60%;
+            background-position-x: 60%;
+        }
+        
+        @include pc {
+            margin-top: 0;
+            height: 753px;
+            padding: 23px 0 24px 0;
+            background: url(/assets/image/ceo-message.png) no-repeat 100%;
+        }
+    }
+
+    & .container {
+        padding-top: 200px;
+        @include pc {
+            padding-top: 0;
+        }
+    }
+}
+
+.ceomessage {
+    &__ttl {
+        margin-bottom: 30px;
+        @include rem(32);
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    &__txt {
+        
+        @include rem(16);
+        line-height: 230%;
+        max-width: 550px;
+    }
+}
+
+.ceoname {
+    &__container {
+        background-color: $colorSub;
+        padding: 16px 26px 21px 26px;
+        position: absolute;
+        top: 50px;
+        @include tab {
+            // top: 100%;
+            width: 298px;
+        }
+        @include pc {
+            width: 298px;
+            padding: 16px 0 21px 26px;
+            right: 0;
+            bottom: 53px;
+            top: auto;
+        }
+    }
+    &__txt {
+        margin-bottom: 20px;
+    }
+}
+
 // --------------------------------------------
 // フッター
 // --------------------------------------------
