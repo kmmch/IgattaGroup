@@ -484,6 +484,10 @@ main {
 // --------------------------------------------
 #CeoMessage {
     padding-top: 80px;
+
+    & .section__ttl {
+        margin-bottom: 69px;
+    }
     & .section__container {
         background: url(/assets/image/seo-message-sp.png) no-repeat 100% top;
         position: relative;
